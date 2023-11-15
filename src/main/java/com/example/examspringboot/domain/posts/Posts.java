@@ -1,16 +1,17 @@
 package com.example.examspringboot.domain.posts;
 
-import jakarta.persistence.*;
+
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 
 @Getter
 @NoArgsConstructor
 @Entity
-public class posts {
+public class Posts {
     //PK 구분자
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +29,7 @@ public class posts {
     private String author;
 
     @Builder
-    public posts(String title, String content, String author){
+    public Posts(String title, String content, String author){
         this.title = title;
         this.author = author;
         this.content = content;
